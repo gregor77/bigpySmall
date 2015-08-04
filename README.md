@@ -3,7 +3,7 @@ bigpy small project, the note class
 
 ## 빅데이터를 위한 파이썬
 - 강사님 : 이성주 seongjoo@codebasic.co
-- http://it-ebooks.info/book/1041/
+- [교재](http://it-ebooks.info/book/1041/)
   * 강의 교재
 - http://continuum.io/ 
   * product > anaconda
@@ -12,7 +12,12 @@ bigpy small project, the note class
   * window에서 설치할때는 "All Users"권한으로 설치를 진행
   * 터미널 $python 입력. python 버전뒤에 anaconda 붙어서 나오는지 확인
   * 터미널 $ipython 입력해도 무방, ctrl + d 종료	
- 
+- [참조 사이트]
+  * [교재자료 pydata-book](https://github.com/pydata/pydata-book)
+  * [이성주 강사님 github](https://github.com/lseongjoo/bigpy)
+  * [IPython 설명](http://ipython.org/)
+  * [Pandas library](http://pandas.pydata.org/)
+  * [Python 기초문법](https://github.com/lseongjoo/learn-python)
  
 ### ipython notebook
 ```
