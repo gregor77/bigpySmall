@@ -3,7 +3,7 @@ bigpy small project, the note class
 
 ## 빅데이터를 위한 파이썬
 - 강사님 : 이성주 seongjoo@codebasic.co
-- [교재](http://it-ebooks.info/book/1041/)
+- [강의교재 "Python for Data Analysis"](http://it-ebooks.info/book/1041)
   * 강의 교재
 - http://continuum.io/ 
   * product > anaconda
