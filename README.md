@@ -14,7 +14,7 @@ bigpy small project, the note class
   * 터미널 $ipython 입력해도 무방, ctrl + d 종료	
  
  
-+ [ipython notebook]
+### ipython notebook
 ```
 $ipython notebook
 
@@ -31,7 +31,8 @@ $ipython notebook
 - ipython notebook으로 작성한 파이썬 소스를 활용할 수가 있냐?
  * File > Download as > 원하는 파일 형식을 입력
 
-2. Pandas
+### Pandas
+1. 사용 방법
  - 편집창을 누른 상태로 문자 'o'를 누르면  output 부분이 토글된다.
  - 편집모드 나가서, 셀을 선택한 상태에서
    * 'y' : 코드
