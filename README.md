@@ -15,7 +15,6 @@ bigpy small project, the note class
  
  
 1. ipython notebook
-
 ```
 $ipython notebook
 
@@ -32,54 +31,50 @@ $ipython notebook
 - ipython notebook으로 작성한 파이썬 소스를 활용할 수가 있냐?
  * File > Download as > 원하는 파일 형식을 입력
 
-
 2. Pandas
-- 편집창을 누른 상태로 문자 'o'를 누르면  output 부분이 토글된다.
-- 편집모드 나가서, 셀을 선택한 상태에서
- * 'y' : 코드
- * 'm' : Markdown
+ - 편집창을 누른 상태로 문자 'o'를 누르면  output 부분이 토글된다.
+ - 편집모드 나가서, 셀을 선택한 상태에서
+   * 'y' : 코드
+   * 'm' : Markdown
+ - ipython 노트북에는 디버그가 실행되지 않는다. -> ipython을 실행해야 한다.
+   * ipython이 있는 경로로 가서, $ipython 입력
+   * $run pydata-book/ch03/ipython_bug.py
+   * $%debug 실행  --> shell이  ipdb 로 변경된 것을 확인가능
+   * $up --> 이 함수를 실행한 상위 스택으로 올라갈 수 있다.
+   * $down --> stack을 내려올 수 있다.
+   * $quit --> debug 종료
+   * $run -d pydata/ch03/ipython_bug.py --> debug 모드로 실행
+   * $continue or $c -->  다음 중단점까지 실행
+   * $next --> 한 줄씩 실행
+   * $step --> 함수 into 실행
+   * $print(a)  -->  특정한 객체의 상태를 확인하고 싶을 때, 파이썬 명령어로 바로 확인할 수 있다.
+   * $list --> 앞, 뒤로 다섯개 줄을 볼 수 있다.
+   * -> break point는 어떻게 설정하는가?
+   * $b 9 --> 줄번호 9에 중단점을 설정해라
+   * $b --> 중단점 정보를 확인하고 싶을때
+ - ipython notebook 자체는 디버그를 지원하지 않는다.
+   * save as. 를 python 으로 다운받는다.
+   * markup은 주석으로, code cell 부분만 export 된다.
+   * 브레이크포인트 찍고, ipython 디버그 실행해서 확인한다.
 
-- ipython 노트북에는 디버그가 실행되지 않는다. -> ipython을 실행해야 한다.
- * ipython이 있는 경로로 가서, $ipython 입력
- * $run pydata-book/ch03/ipython_bug.py
- * $%debug 실행  --> shell이  ipdb 로 변경된 것을 확인가능
- * $up --> 이 함수를 실행한 상위 스택으로 올라갈 수 있다.
- * $down --> stack을 내려올 수 있다.
- * $quit --> debug 종료
+3. [참고]
+  - anaconda 말고, enthought 라는 패키지도 있다. (www.enthought.com)
+  - numpy, scipy를 만든 곳 --> 데이터 분석에 자주 사용
+  - "데이터/수치 분석을 위한 파이썬 라이브러리 SciPy와 NumPy" (http://www.hanbit.co.kr/ebook/look.html?isbn=9788968486135)
 
- * $run -d pydata/ch03/ipython_bug.py --> debug 모드로 실행
- * $continue or $c -->  다음 중단점까지 실행
- * $next --> 한 줄씩 실행
- * $step --> 함수 into 실행
- * $print(a)  -->  특정한 객체의 상태를 확인하고 싶을 때, 파이썬 명령어로 바로 확인할 수 있다.
- * $list --> 앞, 뒤로 다섯개 줄을 볼 수 있다.
- * -> break point는 어떻게 설정하는가?
-  * $b 9 --> 줄번호 9에 중단점을 설정해라
-  * $b --> 중단점 정보를 확인하고 싶을때
-
-- ipython notebook 자체는 디버그를 지원하지 않는다.
- * save as. 를 python 으로 다운받는다.
- * markup은 주석으로, code cell 부분만 export 된다.
- * 브레이크포인트 찍고, ipython 디버그 실행해서 확인한다.
-
-- [참고]
- * anaconda 말고, enthought 라는 패키지도 있다. (www.enthought.com)
- * numpy, scipy를 만든 곳 --> 데이터 분석에 자주 사용
- * "데이터/수치 분석을 위한 파이썬 라이브러리 SciPy와 NumPy" (http://www.hanbit.co.kr/ebook/look.html?isbn=9788968486135)
-
-- anaconda vs enthought
- * ipython을 설치해서 둘다 사용하는데, enthought는 ipython기반에 자기 독자적인 개발체계를 사용하는데 비즈니스 모델을 가지므로, 사용하기가 번거로운 면이 있다.
+4. anaconda vs enthought
+  - ipython을 설치해서 둘다 사용하는데, enthought는 ipython기반에 자기 독자적인 개발체계를 사용하는데 비즈니스 모델을 가지므로, 사용하기가 번거로운 면이 있다.
  
  ```
  $pip search ipython  # ipython 패키지를 찾는 명령어
  $pip install pandas  # 원하는 패키지를 설치할 수 있다. unix 계열에 apt-get과 유사한 명령어	
  ```
 
-- [사용 예]
- * 분석 서버와 표현해주는 웹서버를 분리하여, http or tcp 통신을 통해서 분석결과를 받아오서 보여준다.
- * 분석 서버에 비용이 많이 드는 경우, 병렬적으로 늘리면서 효율적으로 관리가 가능하다.
- * 실제 강사님도 이렇게 사용하고 있다고 함.
+5. [사용 예]
+  - 분석 서버와 표현해주는 웹서버를 분리하여, http or tcp 통신을 통해서 분석결과를 받아오서 보여준다.
+  - 분석 서버에 비용이 많이 드는 경우, 병렬적으로 늘리면서 효율적으로 관리가 가능하다.
+  - 실제 강사님도 이렇게 사용하고 있다고 함.
 
-- [질문]
- * 센서로 수집한 종류를 파일로 떨궈서 분석을 해야하는가? --> NoSQL, 관계형 DB로 부터 DataFrame생성이 가능
- * d3.js로 데이터 시각화를 하고 싶은데, 분석을 파이썬기반이면 해당 웹앱도 파이썬 기반이 되어야 하는가?
+6. [질문]
+  - 센서로 수집한 종류를 파일로 떨궈서 분석을 해야하는가? --> NoSQL, 관계형 DB로 부터 DataFrame생성이 가능
+  - d3.js로 데이터 시각화를 하고 싶은데, 분석을 파이썬기반이면 해당 웹앱도 파이썬 기반이 되어야 하는가?
