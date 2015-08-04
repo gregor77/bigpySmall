@@ -14,7 +14,7 @@ bigpy small project, the note class
   * 터미널 $ipython 입력해도 무방, ctrl + d 종료	
  
  
-1. [[ Day 1 ]]
+1. Day 1
 
 ```
 $ipython notebook
